@@ -38,9 +38,10 @@ const Racional Racional::operator+(const Racional& racional_b)const{
 	den=denominador*racional_b.getDen();
 	num=numerador*racional_b.getDen()+denominador*racional_b.getNum();
 	Racional rac(num,den);
-	ofstream archivo("Racionales.txt",ios::app);
+	ofstream archivo("Log.txt",ios::app);
 	if(archivo.is_open()){
 		archivo<<num1<<"/"<<den1<<" + "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
+		archivo.close();
 	}
 	return rac;
 }
@@ -49,9 +50,10 @@ const Racional Racional::operator-(const Racional& racional_b)const{
 	den=denominador*racional_b.getDen();
 	num=numerador*racional_b.getDen()-denominador*racional_b.getNum();
 	Racional rac(num,den);
-	ofstream archivo("Racionales.txt",ios::app);
+	ofstream archivo("Log.txt",ios::app);
 	if(archivo.is_open()){
 		archivo<<num1<<"/"<<den1<<" - "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
+		archivo.close();
 	}
 	return rac;
 }
@@ -59,9 +61,10 @@ const Racional Racional::operator*(const Racional& racional_b)const{
 	int den=numerador*racional_b.getNum(),den1=denominador;
 	int num=denominador*racional_b.getDen(),num1=numerador;
 	Racional rac(num,den);
-	ofstream archivo("Racionales.txt",ios::app);
+	ofstream archivo("Log.txt",ios::app);
 	if(archivo.is_open()){
 		archivo<<num1<<"/"<<den1<<" * "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
+		archivo.close();
 	}
 	return rac;
 }
@@ -69,9 +72,10 @@ const Racional Racional::operator/(const Racional& racional_b)const{
 	int num=numerador*racional_b.getDen(),num1=numerador;
 	int den=denominador*racional_b.getNum(),den1=denominador;
 	Racional rac(num,den);
-	ofstream archivo("Racionales.txt",ios::app);
+	ofstream archivo("Log.txt",ios::app);
 	if(archivo.is_open()){
 		archivo<<num1<<"/"<<den1<<" / "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
+		archivo.close();
 	}
 	return rac;
 }
@@ -82,9 +86,10 @@ const void Racional::operator+=(const Racional& racional_b){
 	numerador=num;
 	denominador=den;
 	MinimaExpresion();
-	ofstream archivo("Racionales.txt",ios::app);
+	ofstream archivo("Log.txt",ios::app);
 	if(archivo.is_open()){
 		archivo<<num1<<"/"<<den1<<" + "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<numerador<<"/"<<denominador<<endl;
+		archivo.close();
 	}
 }
 const void Racional::operator-=(const Racional& racional_b){
@@ -94,9 +99,10 @@ const void Racional::operator-=(const Racional& racional_b){
 	numerador=num;
 	denominador=den;
 	MinimaExpresion();
-	ofstream archivo("Racionales.txt",ios::app);
+	ofstream archivo("Log.txt",ios::app);
 	if(archivo.is_open()){
 		archivo<<num1<<"/"<<den1<<" - "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<numerador<<"/"<<denominador<<endl;
+		archivo.close();
 	}
 }
 const void Racional::operator*=(const Racional& racional_b){
@@ -106,9 +112,10 @@ const void Racional::operator*=(const Racional& racional_b){
 	numerador=num;
 	denominador=den;
 	MinimaExpresion();
-	ofstream archivo("Racionales.txt",ios::app);
+	ofstream archivo("Log.txt",ios::app);
 	if(archivo.is_open()){
 		archivo<<num1<<"/"<<den1<<" * "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<numerador<<"/"<<denominador<<endl;
+		archivo.close();
 	}
 }
 const void Racional::operator/=(const Racional& racional_b){
@@ -119,8 +126,9 @@ const void Racional::operator/=(const Racional& racional_b){
 	numerador=num;
 	denominador=den;
 	MinimaExpresion();
-	ofstream archivo("Racionales.txt",ios::app);
+	ofstream archivo("Log.txt",ios::app);
 	if(archivo.is_open()){
 		archivo<<num1<<"/"<<den1<<" / "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<numerador<<"/"<<denominador<<endl;
+		archivo.close();
 	}
 }

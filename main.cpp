@@ -19,7 +19,7 @@ int main(){
 	while(opcion!=10){
 		cout<<"Menu"<<endl;
 		cout<<"1-Crear Racional:"<<endl;
-		cout<<"	       Crear Otro:"<<endl;
+		cout<<"	    Crear Otro:"<<endl;
 		cout<<"2-Sumar"<<endl;
 		cout<<"3-Restar"<<endl;
 		cout<<"4-Multiplicar"<<endl;
