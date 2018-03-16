@@ -19,12 +19,12 @@ int main(){
 	while(opcion!=10){
 		cout<<"Menu"<<endl;
 		cout<<"1-Crear Racional:"<<endl;
-		cout<<"Crear Otro:"<<endl;
+		cout<<"	       Crear Otro:"<<endl;
 		cout<<"2-Sumar"<<endl;
 		cout<<"3-Restar"<<endl;
 		cout<<"4-Multiplicar"<<endl;
 		cout<<"5-Dividir"<<endl;
-		cout<<"Asignar:"<<endl;
+		cout<<"        Asignar:"<<endl;
 		cout<<"6-Suma"<<endl;
 		cout<<"7-Resta"<<endl;
 		cout<<"8-Multiplicacion"<<endl;
@@ -32,14 +32,14 @@ int main(){
 		cout<<"10-Salir"<<endl;
 		cin>>opcion;
 		int pos1,pos2;
-		if(opcion!=1||opcion!=10){
+		if(opcion!=1&&opcion!=10){
 			cout<<"Ingrese la posicion de los racionales"<<endl;
 			for(int i=0;i<racionales.size();i++){
 				cout<<i<<"-"<<racionales[i].getNum()<<"/"<<racionales[i].getDen()<<endl;
 			}
 			cin>>pos1;
 			cin>>pos2;
-			}
+		}
 		switch(opcion){
 			case 1:
 				Crear(racionales);

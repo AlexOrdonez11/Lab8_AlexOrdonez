@@ -33,45 +33,45 @@ int Racional::getDen()const{
 	return denominador;
 }
 const Racional Racional::operator+(const Racional& racional_b)const{
-	int den;
-	int num;
+	int den,den1=denominador;
+	int num,num1=numerador;
 	den=denominador*racional_b.getDen();
 	num=numerador*racional_b.getDen()+denominador*racional_b.getNum();
 	Racional rac(num,den);
 	ofstream archivo("Racionales.txt",ios::app);
 	if(archivo.is_open()){
-		archivo<<num<<"/"<<den<<" + "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
+		archivo<<num1<<"/"<<den1<<" + "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
 	}
 	return rac;
 }
 const Racional Racional::operator-(const Racional& racional_b)const{
-	int den,num;
+	int den,num,den1=denominador,num1=numerador;
 	den=denominador*racional_b.getDen();
 	num=numerador*racional_b.getDen()-denominador*racional_b.getNum();
 	Racional rac(num,den);
 	ofstream archivo("Racionales.txt",ios::app);
 	if(archivo.is_open()){
-		archivo<<num<<"/"<<den<<" - "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
+		archivo<<num1<<"/"<<den1<<" - "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
 	}
 	return rac;
 }
 const Racional Racional::operator*(const Racional& racional_b)const{
-	int den=numerador*racional_b.getNum();
-	int num=denominador*racional_b.getDen();
+	int den=numerador*racional_b.getNum(),den1=denominador;
+	int num=denominador*racional_b.getDen(),num1=numerador;
 	Racional rac(num,den);
 	ofstream archivo("Racionales.txt",ios::app);
 	if(archivo.is_open()){
-		archivo<<num<<"/"<<den<<" * "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
+		archivo<<num1<<"/"<<den1<<" * "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
 	}
 	return rac;
 }
 const Racional Racional::operator/(const Racional& racional_b)const{
-	int num=numerador*racional_b.getDen();
-	int den=denominador*racional_b.getNum();
+	int num=numerador*racional_b.getDen(),num1=numerador;
+	int den=denominador*racional_b.getNum(),den1=denominador;
 	Racional rac(num,den);
 	ofstream archivo("Racionales.txt",ios::app);
 	if(archivo.is_open()){
-		archivo<<num<<"/"<<den<<" / "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
+		archivo<<num1<<"/"<<den1<<" / "<<racional_b.getNum()<<"/"<<racional_b.getDen()<<" = "<<rac.getNum()<<"/"<<rac.getDen()<<endl;
 	}
 	return rac;
 }
